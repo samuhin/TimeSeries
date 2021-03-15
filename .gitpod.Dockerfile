@@ -6,6 +6,9 @@ ENV TZ=Europe/Moscow
 ### time zone ###
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
+### copy python requirements
+COPY requirements.txt requirements.txt
+
 ### base ###
 RUN apt-get update && apt-get -y upgrade && apt-get install -y docker-compose locales python3-pip sudo slirp4netns \
 && pip3 install --upgrade pip \
