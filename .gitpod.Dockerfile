@@ -7,7 +7,8 @@ ENV TZ=Europe/Moscow
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 ### base ###
-RUN apt-get update && apt-get -y upgrade && apt-get install -y docker-compose locales jupyter sudo slirp4netns \
+RUN apt-get update && apt-get -y upgrade && apt-get install -y docker-compose locales python3-pip sudo slirp4netns \
+&& pip3 install jupyterlab --no-cache-dir
 && locale-gen en_US.UTF-8
 
 ### Gitpod user ###
