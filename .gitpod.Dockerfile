@@ -13,6 +13,8 @@ COPY requirements.txt requirements.txt
 RUN apt-get update && apt-get -y upgrade && apt-get install -y docker-compose locales python3-pip sudo slirp4netns \
 && pip3 install --upgrade pip \
 && pip3 install jupyterlab --no-cache-dir \
+&& pip install scikit-build --no-cache-dir \
+&& pip install cmake --no-cache-dir \
 && pip3 install -r requirements.txt --no-cache-dir \
 && locale-gen en_US.UTF-8
 
