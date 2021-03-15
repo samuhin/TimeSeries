@@ -3,7 +3,7 @@ image:
 
 tasks:
   - command: sudo docker-up &
-  - command: jupyter notebook --ip 0.0.0.0 --NotebookApp.token='' --no-browser&
+  - command: jupyter-lab --ip 0.0.0.0 --NotebookApp.token='' --no-browser&
   - command: sudo su
 
 ports:
