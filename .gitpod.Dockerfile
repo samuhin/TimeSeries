@@ -15,7 +15,7 @@ RUN apt-get update && apt-get -y upgrade && apt-get install -y docker-compose lo
 && locale-gen en_US.UTF-8
 
 ### copy python requirements ###
-COPY requirements3.txt requirements.txt
+COPY requirements.txt requirements.txt
 
 ### python packages install ###
 RUN pip3 install --upgrade pip --no-cache-dir  \
