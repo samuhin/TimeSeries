@@ -18,10 +18,7 @@ RUN apt-get update && apt-get -y upgrade && apt-get install -y docker-compose lo
 COPY requirements3.txt requirements.txt
 
 ### python packages install ###
-RUN pip3 install --upgrade pip \
-&& pip3 install jupyterlab --no-cache-dir \
-&& pip install scikit-build --no-cache-dir \
-&& pip install cmake --no-cache-dir \
+RUN pip3 install --upgrade pip --no-cache-dir  \
 && pip3 install -r requirements.txt --no-cache-dir
 
 ### clean ###
